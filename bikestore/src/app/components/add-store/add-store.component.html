@@ -1,0 +1,44 @@
+<div>
+    <div class="submit-form">
+      @if (!submitted) {
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          required
+          [ngModel]="Store.name"
+          name="name"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="Store.city"
+          name="description"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="Store.city"
+          name="description"
+        />
+      </div>
+  
+      <button (click)="saveStore()" class="btn btn-success">Submit</button>
+      } @else {
+      <h4>Store was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newStore()">Add</button>
+      }
+    </div>
+  </div>
